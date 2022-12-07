@@ -1,8 +1,0 @@
-/home/bloodyclaw/projects/github/test_task_shape_printer/build/CMakeFiles/edit_cache.dir
-/home/bloodyclaw/projects/github/test_task_shape_printer/build/CMakeFiles/rebuild_cache.dir
-/home/bloodyclaw/projects/github/test_task_shape_printer/build/lib/CMakeFiles/Shape.dir
-/home/bloodyclaw/projects/github/test_task_shape_printer/build/lib/CMakeFiles/edit_cache.dir
-/home/bloodyclaw/projects/github/test_task_shape_printer/build/lib/CMakeFiles/rebuild_cache.dir
-/home/bloodyclaw/projects/github/test_task_shape_printer/build/src/CMakeFiles/shape_printer.dir
-/home/bloodyclaw/projects/github/test_task_shape_printer/build/src/CMakeFiles/edit_cache.dir
-/home/bloodyclaw/projects/github/test_task_shape_printer/build/src/CMakeFiles/rebuild_cache.dir
