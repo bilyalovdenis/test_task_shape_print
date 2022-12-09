@@ -12,27 +12,27 @@ namespace ts{
     class ToolButton;
     class Toolbar : public Space{
     public:    
-        Toolbar(WorkSpace* curr_workspace);
+        Toolbar(std::shared_ptr<WorkSpace> curr_workspace);
         ~Toolbar();
-        void close_space();
         void draw( sf::RenderWindow *_window);
 
     private:
         void intialization_buttons();
         void click_handler(sf::Vector2i &position);
-        std::vector <ToolButton*> buttons; 
-         WorkSpace* _curr_workspace;
+        std::vector <std::shared_ptr<ToolButton>> buttons; 
+         std::shared_ptr<WorkSpace> _curr_workspace;
     };
      class ToolButton : public Button{
         friend Toolbar;
-        ToolButton(std::string name, WorkSpace* curr_workspace);
+        public:
+        ToolButton(std::string name, std::shared_ptr<WorkSpace>  curr_workspace);
         ~ToolButton();
-        void close_space();
+        private:
         void set_texture(std::basic_string<char> &path);
         void set_position(int x, int y);
         void click_handler();
         sf::Sprite* get_sprite();
         std::string _name;
-        WorkSpace* _curr_workspace;
+        std::shared_ptr<WorkSpace> _curr_workspace;
     };
 }

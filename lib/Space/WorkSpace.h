@@ -11,11 +11,8 @@ namespace ts{
     public:
         WorkSpace();
         ~WorkSpace();
-        WorkSpace(const WorkSpace &);
-        WorkSpace& operator=(WorkSpace&);
-        void add_shape(Shape *s);
+        void add_shape(std::shared_ptr<Shape> s);
         void draw();
-        void close_space(); 
 
     private:
 
@@ -23,7 +20,7 @@ namespace ts{
            
         
 
-        std::vector<Shape*> shapes; 
+        std::vector<std::shared_ptr<Shape>> shapes; 
     };
 
 }

@@ -12,7 +12,6 @@ namespace ts{
     class Space{
     public:
         virtual ~Space()=0;
-        virtual void close_space()=0;
         void mause_click(sf::Vector2i &position);
        // virtual void draw()=0;
         //virtual set_position_on_screen();

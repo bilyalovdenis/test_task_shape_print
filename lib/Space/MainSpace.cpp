@@ -6,15 +6,13 @@ using namespace ts;
 MainSpace::MainSpace(sf::RenderWindow *window):_window(window){
     //create_toolbar();
     creat_workspace();
-    toolbar = new Toolbar(curr_workspace);
-
-
+    toolbar = std::make_shared<Toolbar>(    curr_workspace);
 }
 MainSpace::~MainSpace(){
-    close_space();
+    
 }
 void MainSpace::creat_workspace(){
-    workspaces.push_back(new WorkSpace());
+    workspaces.push_back(std::make_shared<WorkSpace>());
     curr_workspace = *workspaces.rbegin();
 }
 void MainSpace::delete_workspace(int number){
@@ -37,14 +35,6 @@ void MainSpace::draw(){
     _window->popGLStates();
   
     _window->display();
-}
-void MainSpace::close_space(){
-    for(auto it : workspaces){
-        it->close_space();   //
-        delete it;
-    }    
-   
-   // toolbar->close_space();
 }
 // void Mainspace::creat_toolbar(){
     
